@@ -7,9 +7,11 @@ $.ajax({
     contentType: 'application/json',
     success: function(result) {
         console.log(result[0]);
-        quote.append('<p>' + result[0].name+'</p>');
-        quote.append('<h2>' + result[0].difficulty + '</h2>');
-        quote.append('<p>' + result[0].instructions + '</p>');
+        var count = Math.floor(Math.random()* 10);
+        console.log(count);
+        quote.append('<p>' + result[count].name+'</p>');
+        quote.append('<h2>' + result[count].difficulty + '</h2>');
+        quote.append('<p>' + result[count].instructions + '</p>');
         
     },
     });
